@@ -1,0 +1,12 @@
+﻿var addAnswer = document.getElementById("answer-button"),
+    answerHolder = document.getElementById("answer-holder"),
+    answerID = 0;
+    // answerHTML = '<div><div><label for="Answers[' + answerID + '}].id">id</label><input type = "text" id="Answers[' + answerID + '].id" name="Answers[' + answerID + '].id"/></div><div><label for="answer-is-correct">IsCorrect</label><input type="checkbox" id="answer-is-correct" name="Answers[' + answerID + '].IsCorrect" value="true"/><input type="hidden" id="answer-is-correct" name="Answers[' + answerID + '].IsCorrect" value="false"/></div><div><label for="Answers[' + answerID + '].Content">Content</label><input type="text" id="Answers[' + answerID + '].Content" name="Answers[' + answerID + '].Content"/></div><div><label for="Answers[' + answerID + '].ImageUrl">ImageUrl</label><input type="text" id="Answers[' + answerID + '].ImageUrl" name="Answers[' + answerID + '].ImageUrl" /></div><div><label for="Answers[' + answerID + '].Reason">Reason</label><input type="text" id="Answers[' + answerID + '].Reason" name="Answers[${answerID}].Reason" /></div></div>';
+    
+addAnswer.addEventListener("click", function () {
+    var answerDiv = document.createElement("div");
+
+    answerDiv.innerHTML = '<div><div><label for="Answers[' + answerID + '}].id">id</label><input type = "text" id="Answers[' + answerID + '].id" name="Answers[' + answerID + '].id" value="' + answerID + '"/></div><div><label for="answer-is-correct">IsCorrect</label><input type="checkbox" id="answer-is-correct" name="Answers[' + answerID + '].IsCorrect" value="true"/><input type="hidden" id="answer-is-correct" name="Answers[' + answerID + '].IsCorrect" value="false"/></div><div><label for="Answers[' + answerID + '].Content">Content</label><input type="text" id="Answers[' + answerID + '].Content" name="Answers[' + answerID + '].Content"/></div><div><label for="Answers[' + answerID + '].ImageUrl">ImageUrl</label><input type="text" id="Answers[' + answerID + '].ImageUrl" name="Answers[' + answerID + '].ImageUrl" /></div><div><label for="Answers[' + answerID + '].Reason">Reason</label><input type="text" id="Answers[' + answerID + '].Reason" name="Answers[${answerID}].Reason" /></div></div>';
+    answerHolder.appendChild(answerDiv);
+    answerID++;
+});
